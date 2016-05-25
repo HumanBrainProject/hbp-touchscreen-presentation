@@ -1,0 +1,132 @@
+@mixin pill($radius) {
+  width: $radius * 2;
+  height: $radius * 2;
+  border-radius: $radius;
+  margin-bottom: $radius * 0.25; // visual alignment compensation
+  line-height: $radius * 2;
+  font-size: $radius * 0.6;
+  font-family: $font-pill-family;
+  font-weight: bold;
+
+  &:after {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.pill {
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, .2);
+  text-align: center;
+  @include pill($pill-radius);
+
+  &.pill-big {
+    @include pill($big-pill-radius)
+  }
+
+  // Set colors and text for every SP below.
+
+  &.sp1 {
+    background-color: $sp1-color;
+
+    &:after {
+      content: 'SP1';
+    }
+  }
+
+  &.sp2 {
+    background-color: $sp2-color;
+
+    &:after {
+      content: 'SP2';
+    }
+  }
+
+  &.sp3 {
+    background-color: $sp3-color;
+
+    &:after {
+      content: 'SP3';
+    }
+  }
+
+  &.sp4 {
+    background-color: $sp4-color;
+
+    &:after {
+      content: 'SP4';
+    }
+  }
+
+  &.sp5 {
+    background-color: $sp5-color;
+
+    &:after {
+      content: 'SP5';
+    }
+  }
+
+  &.sp6 {
+    background-color: $sp6-color;
+
+    &:after {
+      content: 'SP6';
+    }
+  }
+
+  &.sp7 {
+    background-color: $sp7-color;
+
+    &:after {
+      content: 'SP7';
+    }
+  }
+
+  &.sp8 {
+    background-color: $sp8-color;
+
+    &:after {
+      content: 'SP8';
+    }
+  }
+
+  &.sp9 {
+    background-color: $sp9-color;
+
+    &:after {
+      content: 'SP9';
+    }
+  }
+
+  &.sp10 {
+    background-color: $sp10-color;
+
+    &:after {
+      content: 'SP10';
+    }
+  }
+
+  &.sp11 {
+    background-color: $sp11-color;
+
+    &:after {
+      content: 'SP11';
+    }
+  }
+
+  &.sp12 {
+    background-color: $sp12-color;
+
+    &:after {
+      content: 'SP12';
+    }
+  }
+
+  &.sp13 {
+    background-color: $sp13-color;
+
+    &:after {
+      content: 'SP13';
+    }
+  }
+}

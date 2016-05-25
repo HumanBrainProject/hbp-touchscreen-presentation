@@ -1,0 +1,53 @@
+.heads-or-tails {
+  transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+
+  &:hover, &.hover {
+  	transform: rotateY(180deg);
+  }
+
+  .heads, .tails {
+  	backface-visibility: hidden;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  }
+
+  .heads {
+  	z-index: 2;
+  	/* for firefox 31 */
+  	transform: rotateY(0deg);
+  }
+
+  /* back, initially hidden pane */
+  .tails {
+  	transform: rotateY(180deg);
+  }
+}
+.circle{
+ position:absolute;
+ width: 360px;
+ height: 360px;
+ border-radius: 50%;
+ z-index: 10;
+ -webkit-transform-origin: center center;
+   transform-origin: center center;
+   cursor: pointer;
+
+}
+
+.circle-text{
+ position:relative;
+	width: 360px;
+	height: 360px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	padding:0 50px;
+	border-radius: 50%;
+	line-height: 24px;
+	color: #fff;
+	background-color: #333;
+}

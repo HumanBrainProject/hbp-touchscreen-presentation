@@ -1,0 +1,70 @@
+.nav-interactive {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding-bottom: 70px;
+  z-index: 4;
+
+  > a {
+    display: block;
+    padding-left: 45px;
+  }
+
+  .link {
+    stroke: rgba(0, 0, 0, 0.25);
+  }
+
+  .node {
+    &.sp1 {
+      fill: $sp1-color;
+    }
+    &.sp2 {
+      fill: $sp2-color;
+    }
+    &.sp3 {
+      fill: $sp3-color;
+    }
+    &.sp4 {
+      fill: $sp4-color;
+    }
+    &.sp5 {
+      fill: $sp5-color;
+    }
+    &.sp6 {
+      fill: $sp6-color;
+    }
+    &.sp7 {
+      fill: $sp7-color;
+    }
+    &.sp8 {
+      fill: $sp8-color;
+    }
+    &.sp9 {
+      fill: $sp9-color;
+    }
+    &.sp10 {
+      fill: $sp10-color;
+    }
+    &.sp11 {
+      fill: $sp11-color;
+    }
+    &.sp12 {
+      fill: $sp12-color;
+    }
+    &.sp13 {
+      fill: $sp13-color;
+    }
+
+
+  }
+
+  .label {
+    user-select: none;
+    //cursor: default;
+    font-size: 10px;
+    font-family: "Gotham-Medium";
+    fill: rgba(255, 255, 255, 0.85);
+  }
+
+}

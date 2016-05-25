@@ -1,0 +1,741 @@
+body, div, main, section, html, nav {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+
+nav {
+  z-index: 10; }
+  nav > a {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.65); }
+    nav > a:hover {
+      background: rgba(0, 0, 0, 0.15);
+      color: rgba(0, 0, 0, 0.65);
+      text-decoration: none; }
+
+.nav-interactive {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50%;
+  padding-bottom: 70px;
+  z-index: 4; }
+  .nav-interactive > a {
+    display: block;
+    padding-left: 45px; }
+  .nav-interactive .link {
+    stroke: rgba(0, 0, 0, 0.25); }
+  .nav-interactive .node.sp1 {
+    fill: rgba(59, 74, 180, 0.85); }
+  .nav-interactive .node.sp2 {
+    fill: rgba(201, 47, 113, 0.85); }
+  .nav-interactive .node.sp3 {
+    fill: rgba(220, 97, 113, 0.85); }
+  .nav-interactive .node.sp4 {
+    fill: rgba(210, 26, 48, 0.85); }
+  .nav-interactive .node.sp5 {
+    fill: rgba(221, 90, 41, 0.85); }
+  .nav-interactive .node.sp6 {
+    fill: rgba(246, 191, 42, 0.85); }
+  .nav-interactive .node.sp7 {
+    fill: rgba(223, 235, 114, 0.85); }
+  .nav-interactive .node.sp8 {
+    fill: rgba(188, 226, 163, 0.85); }
+  .nav-interactive .node.sp9 {
+    fill: rgba(184, 221, 201, 0.85); }
+  .nav-interactive .node.sp10 {
+    fill: rgba(146, 218, 208, 0.85); }
+  .nav-interactive .node.sp11 {
+    fill: rgba(123, 185, 206, 0.85); }
+  .nav-interactive .node.sp12 {
+    fill: rgba(81, 126, 196, 0.85); }
+  .nav-interactive .node.sp13 {
+    fill: rgba(152, 152, 152, 0.85); }
+  .nav-interactive .label {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 10px;
+    font-family: "Gotham-Medium";
+    fill: rgba(255, 255, 255, 0.85); }
+
+.nav-sequential {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  text-align: right;
+  margin: 50px 0 0 0;
+  padding-top: 40px;
+  border-top: solid 2px rgba(0, 0, 0, 0.95); }
+  .nav-sequential > a {
+    color: rgba(0, 0, 0, 0.85);
+    display: inline-block;
+    font-size: 50px;
+    /*line-height: 125px;*/
+    padding: 0 20px;
+    transition: all 500ms; }
+  .nav-sequential > a:hover, .nav-sequential a:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.18);
+    transition: all 300ms; }
+  .nav-sequential.start #previous,
+  .nav-sequential.start #home {
+    visibility: hidden; }
+  .nav-sequential.end #next {
+    visibility: hidden; }
+
+.left-floating {
+  float: left; }
+
+/**
+ * Each section represent a 'page'
+ */
+section {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #f5f5f5;
+  padding: 0 0 0 50%;
+  padding-bottom: 5%;
+  z-index: 1; }
+  section article {
+    opacity: 0; }
+  section:target {
+    z-index: 3; }
+    section:target article {
+      opacity: 1;
+      transition: opacity 2s; }
+  section.full-size {
+    opacity: 1; }
+    section.full-size:target {
+      z-index: 6; }
+  section .later-text {
+    opacity: 0; }
+  section:target .later-text {
+    opacity: 1;
+    transition: all 3s; }
+
+/**
+ * Content
+ */
+section > article {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-right: 80px; }
+
+.institutions {
+  margin-top: 40px;
+  padding-top: 15px;
+  font-variant: small-caps;
+  border-top: solid 1px; }
+
+.pill {
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  line-height: 40px;
+  font-size: 12px;
+  font-family: "Gotham-Book", helvetica, arial;
+  font-weight: bold; }
+  .pill:after {
+    color: rgba(255, 255, 255, 0.8); }
+  .pill.pill-big {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    line-height: 80px;
+    font-size: 24px;
+    font-family: "Gotham-Book", helvetica, arial;
+    font-weight: bold; }
+    .pill.pill-big:after {
+      color: rgba(255, 255, 255, 0.8); }
+  .pill.sp1 {
+    background-color: rgba(59, 74, 180, 0.85); }
+    .pill.sp1:after {
+      content: 'SP1'; }
+  .pill.sp2 {
+    background-color: rgba(201, 47, 113, 0.85); }
+    .pill.sp2:after {
+      content: 'SP2'; }
+  .pill.sp3 {
+    background-color: rgba(220, 97, 113, 0.85); }
+    .pill.sp3:after {
+      content: 'SP3'; }
+  .pill.sp4 {
+    background-color: rgba(210, 26, 48, 0.85); }
+    .pill.sp4:after {
+      content: 'SP4'; }
+  .pill.sp5 {
+    background-color: rgba(221, 90, 41, 0.85); }
+    .pill.sp5:after {
+      content: 'SP5'; }
+  .pill.sp6 {
+    background-color: rgba(246, 191, 42, 0.85); }
+    .pill.sp6:after {
+      content: 'SP6'; }
+  .pill.sp7 {
+    background-color: rgba(223, 235, 114, 0.85); }
+    .pill.sp7:after {
+      content: 'SP7'; }
+  .pill.sp8 {
+    background-color: rgba(188, 226, 163, 0.85); }
+    .pill.sp8:after {
+      content: 'SP8'; }
+  .pill.sp9 {
+    background-color: rgba(184, 221, 201, 0.85); }
+    .pill.sp9:after {
+      content: 'SP9'; }
+  .pill.sp10 {
+    background-color: rgba(146, 218, 208, 0.85); }
+    .pill.sp10:after {
+      content: 'SP10'; }
+  .pill.sp11 {
+    background-color: rgba(123, 185, 206, 0.85); }
+    .pill.sp11:after {
+      content: 'SP11'; }
+  .pill.sp12 {
+    background-color: rgba(81, 126, 196, 0.85); }
+    .pill.sp12:after {
+      content: 'SP12'; }
+  .pill.sp13 {
+    background-color: rgba(152, 152, 152, 0.85); }
+    .pill.sp13:after {
+      content: 'SP13'; }
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url("/fonts/Gotham-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url("/fonts/Gotham-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url("/fonts/Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham-Black';
+  font-weight: bold;
+  src: url("/fonts/Gotham-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal; }
+
+body, a {
+  font-family: 'Gotham-Light', helvetica, arial;
+  font-weight: normal;
+  line-height: 2;
+  text-rendering: optimizelegibility;
+  color: #111;
+  background-color: #f5f5f5;
+  text-decoration: none; }
+
+h1 {
+  font-family: 'Gotham-Black', helvetica, arial;
+  margin-top: 20px;
+  font-size: 80px;
+  line-height: 1;
+  font-variant: small-caps;
+  text-rendering: optimizelegibility;
+  color: #111; }
+
+h2 {
+  font-family: 'Gotham-Book', helvetica, arial;
+  font-size: 30px;
+  line-height: 1.5;
+  text-rendering: optimizelegibility;
+  color: #111; }
+
+h3 {
+  font-family: 'Gotham-Book', helvetica, arial;
+  font-size: 30px;
+  line-height: 1.5;
+  text-rendering: optimizelegibility;
+  color: #fff; }
+
+/*a:hover {
+  font-family: 'Gotham-bold', helvetica, arial;
+  font-weight: normal;
+	line-height: 2;
+  text-rendering: optimizelegibility;
+  color: #111;
+  background-color: #f5f5f5;
+	text-decoration: none;
+}*/
+/* ICON FONTS */
+@font-face {
+  font-family: '77-Essential-Icons';
+  src: url("/fonts/77-Essential-Icons.eot?-3rv21r");
+  src: url("/fonts/77-Essential-Icons.eot?#iefix-3rv21r") format("embedded-opentype"), url("/fonts/77-Essential-Icons.woff?-3rv21r") format("woff"), url("/fonts/77-Essential-Icons.ttf?-3rv21r") format("truetype"), url("/fonts/77-Essential-Icons.svg?-3rv21r#77-Essential-Icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: '77-Essential-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-Plus:before {
+  content: "+"; }
+
+.icon-Attachment:before {
+  content: "a"; }
+
+.icon-Reply:before {
+  content: "r"; }
+
+.icon-BarGraph:before {
+  content: "g"; }
+
+.icon-Book:before {
+  content: "R"; }
+
+.icon-Bookmark:before {
+  content: "B"; }
+
+.icon-Briefcase:before {
+  content: "b"; }
+
+.icon-BrowserWindow:before {
+  content: "w"; }
+
+.icon-Calendar:before {
+  content: "c"; }
+
+.icon-Camera:before {
+  content: "C"; }
+
+.icon-Cancel:before {
+  content: "x"; }
+
+.icon-Clock:before {
+  content: "t"; }
+
+.icon-CommentwithLines:before {
+  content: "m"; }
+
+.icon-Comment:before {
+  content: "M"; }
+
+.icon-Computer:before {
+  content: "1"; }
+
+.icon-Controls:before {
+  content: "S"; }
+
+.icon-Conversation:before {
+  content: "s"; }
+
+.icon-CreditCard:before {
+  content: "\A3"; }
+
+.icon-Crosshair:before {
+  content: "T"; }
+
+.icon-Diary:before {
+  content: "n"; }
+
+.icon-DownArrow:before {
+  content: "d"; }
+
+.icon-Email:before {
+  content: "e"; }
+
+.icon-Folder:before {
+  content: "f"; }
+
+.icon-Forward:before {
+  content: "F"; }
+
+.icon-Heart:before {
+  content: "3"; }
+
+.icon-Home:before {
+  content: "h"; }
+
+.icon-Inbox:before {
+  content: "D"; }
+
+.icon-Layers:before {
+  content: "L"; }
+
+.icon-LeftArrow:before {
+  content: "<"; }
+
+.icon-Link:before {
+  content: "l"; }
+
+.icon-List:before {
+  content: ":"; }
+
+.icon-LocationMarker:before {
+  content: "P"; }
+
+.icon-Location:before {
+  content: "K"; }
+
+.icon-Map:before {
+  content: "q"; }
+
+.icon-Medal:before {
+  content: "H"; }
+
+.icon-Menu:before {
+  content: "="; }
+
+.icon-Microphone:before {
+  content: "A"; }
+
+.icon-Minus:before {
+  content: "-"; }
+
+.icon-Options:before {
+  content: "o"; }
+
+.icon-MoreOptions:before {
+  content: "O"; }
+
+.icon-Music:before {
+  content: "N"; }
+
+.icon-Mute:before {
+  content: "X"; }
+
+.icon-Notification:before {
+  content: "j"; }
+
+.icon-Padlock:before {
+  content: "k"; }
+
+.icon-Document:before {
+  content: "W"; }
+
+.icon-Phone:before {
+  content: "i"; }
+
+.icon-Photo:before {
+  content: "p"; }
+
+.icon-PieChart:before {
+  content: "G"; }
+
+.icon-Pin:before {
+  content: "J"; }
+
+.icon-View:before {
+  content: "\531"; }
+
+.icon-Printer:before {
+  content: "\532"; }
+
+.icon-Profile:before {
+  content: "\533"; }
+
+.icon-Rearrange:before {
+  content: "z"; }
+
+.icon-Refresh:before {
+  content: "~"; }
+
+.icon-RightArrow:before {
+  content: ">"; }
+
+.icon-Save:before {
+  content: "y"; }
+
+.icon-Search:before {
+  content: "Y"; }
+
+.icon-Settings:before {
+  content: "2"; }
+
+.icon-Share:before {
+  content: "@"; }
+
+.icon-Shop:before {
+  content: "Q"; }
+
+.icon-Signals:before {
+  content: "{"; }
+
+.icon-Signal:before {
+  content: "|"; }
+
+.icon-Volume:before {
+  content: "Z"; }
+
+.icon-Star:before {
+  content: "*"; }
+
+.icon-iPad:before {
+  content: "I"; }
+
+.icon-Tag:before {
+  content: "E"; }
+
+.icon-Checkmark:before {
+  content: "/"; }
+
+.icon-Toggle:before {
+  content: "`"; }
+
+.icon-Trash:before {
+  content: "_"; }
+
+.icon-Typing:before {
+  content: "."; }
+
+.icon-UpArrow:before {
+  content: "^"; }
+
+.icon-User:before {
+  content: "u"; }
+
+.icon-Users:before {
+  content: "U"; }
+
+.icon-VideoCamera:before {
+  content: "V"; }
+
+.icon-Video:before {
+  content: "v"; }
+
+.icon-Warning:before {
+  content: "!"; }
+
+.icon-CreateNew:before {
+  content: "}"; }
+
+.heads-or-tails {
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  /* back, initially hidden pane */ }
+  .heads-or-tails:hover, .heads-or-tails.hover {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
+  .heads-or-tails .heads, .heads-or-tails .tails {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .heads-or-tails .heads {
+    z-index: 2;
+    /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  .heads-or-tails .tails {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
+
+.circle {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  z-index: 10;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  cursor: pointer; }
+
+.circle-text {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 50px;
+  border-radius: 50%;
+  line-height: 24px;
+  color: #fff;
+  background-color: #333; }
+
+.full-size {
+  padding-left: 40px; }
+  .full-size article {
+    padding-left: 45px; }
+
+#hbp article {
+  top: 40%;
+  margin: 50px 80px 0 45%;
+  text-align: left; }
+
+#hbp img {
+  margin-left: 25%;
+  margin-bottom: 50px; }
+
+#hbp:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-image: url("/images/yuri-neuron.png"); }
+
+#hbp:target:before {
+  opacity: 1;
+  transition: all 800ms; }
+
+#global-collab:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-image: url("/images/bruno-neuron.png"); }
+
+#global-collab:target:before {
+  opacity: 1;
+  transition: all 800ms; }
+
+#global-collab article {
+  margin: 50px 80px 0 45%;
+  text-align: left; }
+
+#ict-project #circle1 {
+  top: 420px;
+  left: 850px; }
+
+#ict-project #circle2 {
+  top: 540px;
+  left: 1200px; }
+
+#ict-project #circle3 {
+  top: 320px;
+  left: 1500px; }
+
+#ict-project:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-image: url("/images/ict-neuron.png"); }
+
+#ict-project:target:before {
+  opacity: 1;
+  transition: all 800ms; }
+
+#ict-project article {
+  top: 20%;
+  margin: 0 0 0 45%;
+  text-align: left; }
+
+#commitment {
+  background-repeat: no-repeat; }
+  #commitment:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-image: url("/images/kid-neuron.png"); }
+  #commitment:target:before {
+    opacity: 1;
+    transition: all 800ms; }
+  #commitment article {
+    margin: 50px 80px 0 45%; }
+
+#research article {
+  top: 45%; }
+
+#SP1 #circle-sp1 {
+  top: -745px;
+  left: 680px; }
+
+#SP2 #circle-sp2 {
+  top: -745px;
+  left: 680px; }
+
+#SP4 #circle-sp4 {
+  top: -809px;
+  left: 680px; }
+
+#SP5 #circle-sp5 {
+  top: -665px;
+  left: 680px; }
+
+#SP6 #circle-sp6 {
+  top: -665px;
+  left: 680px; }
+
+#SP7 #circle-sp7 {
+  top: -714px;
+  left: 680px; }
+
+#SP8 #circle-sp8 {
+  top: -666px;
+  left: 680px; }
+
+#SP9 article {
+  top: 60%; }
+
+#SP9 #circle-sp9 {
+  top: -730px;
+  left: 680px; }
+
+#SP10 #circle-sp10 {
+  top: -698px;
+  left: 680px; }
+
+#SP12 #circle-sp12 {
+  top: -666px;
+  left: 680px; }
+
+/*# sourceMappingURL=bundle.css.map*/

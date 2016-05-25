@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'Gotham-Light';
+	src: url($hbp-font-path + "Gotham-Light.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url($hbp-font-path + "Gotham-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url($hbp-font-path + "Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham-Black';
+	font-weight: bold;
+	src: url($hbp-font-path + "Gotham-Black.otf") format("opentype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+
+body, a {
+  font-family: 'Gotham-Light', helvetica, arial;
+  font-weight: normal;
+	line-height: 2;
+  text-rendering: optimizelegibility;
+  color: #111;
+  background-color: #f5f5f5;
+	text-decoration: none;
+}
+
+h1 {
+  font-family: 'Gotham-Black', helvetica, arial;
+	margin-top: 20px;
+
+	font-size: 80px;
+	line-height: 1;
+	font-variant: small-caps;
+
+  text-rendering: optimizelegibility;
+  color: #111;
+}
+h2 {
+  font-family: 'Gotham-Book', helvetica, arial;
+	font-size: 30px;
+	line-height: 1.5;
+  text-rendering: optimizelegibility;
+  color: #111;
+
+}
+
+h3 {
+  font-family: 'Gotham-Book', helvetica, arial;
+	font-size: 30px;
+	line-height: 1.5;
+  text-rendering: optimizelegibility;
+  color: #fff;
+
+}
+
+/*a:hover {
+  font-family: 'Gotham-bold', helvetica, arial;
+  font-weight: normal;
+	line-height: 2;
+  text-rendering: optimizelegibility;
+  color: #111;
+  background-color: #f5f5f5;
+	text-decoration: none;
+}*/

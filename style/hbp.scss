@@ -1,0 +1,160 @@
+$hbp-font-path: "/fonts/";
+$font-family: 'Gotham-Light', helvetica, arial;
+$font-pill-family: 'Gotham-Book', helvetica, arial;
+
+$pill-radius: 20px;
+$big-pill-radius: 40px;
+
+$sp1-color: transparentize(#3b4ab4, 0.15);
+$sp2-color: transparentize(#c92f71, 0.15);
+$sp3-color: transparentize(#dc6171, 0.15);
+$sp4-color: transparentize(#d21a30, 0.15);
+$sp5-color: transparentize(#dd5a29, 0.15);
+$sp6-color: transparentize(#f6bf2a, 0.15);
+$sp7-color: transparentize(#dfeb72, 0.15);
+$sp8-color: transparentize(#bce2a3, 0.15);
+$sp9-color: transparentize(#b8ddc9, 0.15);
+$sp10-color: transparentize(#92dad0, 0.15);
+$sp11-color: transparentize(#7bb9ce, 0.15);
+$sp12-color: transparentize(#517ec4, 0.15);
+$sp13-color: transparentize(#989898, 0.15);
+
+@import "./hbp/preset";
+@import "./hbp/nav";
+@import "./hbp/nav-interactive";
+@import "./hbp/nav-sequential";
+@import "./hbp/section-slide";
+@import "./hbp/sp-pill";
+@import "./hbp/types";
+@import "./hbp/icon";
+@import "./hbp/heads-or-tails";
+@import "./hbp/bg-animation";
+
+// Styles for full .full-size slides
+// which does not feature the navigation
+.full-size {
+ padding-left: 40px;
+
+
+ article {
+   padding-left: 45px;
+ }
+}
+
+
+// Styles for each 'slides'
+#hbp {
+
+ article {
+   top:40%;
+   margin:  50px 80px 0 45%;
+   text-align: left;
+
+   }
+   img {
+   margin-left: 25%;
+   margin-bottom:50px;
+ }
+ @include background-enter-animation("/images/yuri-neuron.png");
+}
+
+#global-collab {
+   @include background-enter-animation("/images/bruno-neuron.png");
+ article {
+   margin: 50px 80px 0 45%;
+   text-align: left;
+
+ }
+}
+#ict-project {
+
+
+
+#circle1{ top:420px; left:850px; }
+#circle2{ top: 540px; left:1200px; }
+#circle3{ top: 320px; left:1500px; }
+
+
+
+@include background-enter-animation("/images/ict-neuron.png");
+ article {
+   top:20%;
+   margin: 0 0 0 45%;
+   text-align: left;
+
+ }
+
+
+}
+
+
+#commitment {
+@include background-enter-animation("/images/kid-neuron.png");
+ background-repeat: no-repeat;
+ article {
+   margin: 50px 80px 0 45%;
+ }
+}
+
+#research {
+ article {
+   top:45%;
+ }
+}
+
+#SP1 {
+#circle-sp1 {top: -745px; left:680px; }
+}
+
+#SP2 {
+#circle-sp2 {top: -745px; left:680px; }
+}
+
+#SP3 {
+}
+
+#SP4 {
+#circle-sp4 {top: -809px; left:680px; }
+}
+
+#SP5 {
+#circle-sp5 {top: -665px; left:680px; }
+}
+
+#SP6 {
+#circle-sp6 {top: -665px; left:680px; }
+}
+
+#SP7 {
+#circle-sp7 {top: -714px; left:680px; }
+}
+
+#SP8 {
+#circle-sp8 {top: -666px; left:680px; }
+}
+
+#SP9 {
+  article {
+    top:60%;
+  }
+#circle-sp9 {top: -730px; left:680px; }
+}
+
+#SP10 {
+#circle-sp10 {top: -698px; left:680px; }
+}
+
+#SP11 {
+
+}
+
+#SP12 {
+
+#circle-sp12 {top: -666px; left:680px; }
+}
+
+
+
+#SP13 {
+
+}
