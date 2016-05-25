@@ -1,4 +1,4 @@
-$hbp-font-path: "/fonts/";
+$hbp-font-path: "/hbp-touchscreen-presentation/fonts/";
 $font-family: 'Gotham-Light', helvetica, arial;
 $font-pill-family: 'Gotham-Book', helvetica, arial;
 
@@ -55,11 +55,11 @@ $sp13-color: transparentize(#989898, 0.15);
    margin-left: 25%;
    margin-bottom:50px;
  }
- @include background-enter-animation("/images/yuri-neuron.png");
+ @include background-enter-animation("/hbp-touchscreen-presentation/images/yuri-neuron.png");
 }
 
 #global-collab {
-   @include background-enter-animation("/images/bruno-neuron.png");
+   @include background-enter-animation("/hbp-touchscreen-presentation/images/bruno-neuron.png");
  article {
    margin: 50px 80px 0 45%;
    text-align: left;
@@ -76,7 +76,7 @@ $sp13-color: transparentize(#989898, 0.15);
 
 
 
-@include background-enter-animation("/images/ict-neuron.png");
+@include background-enter-animation("/hbp-touchscreen-presentation/images/ict-neuron.png");
  article {
    top:20%;
    margin: 0 0 0 45%;
@@ -89,7 +89,7 @@ $sp13-color: transparentize(#989898, 0.15);
 
 
 #commitment {
-@include background-enter-animation("/images/kid-neuron.png");
+@include background-enter-animation("/hbp-touchscreen-presentation/images/kid-neuron.png");
  background-repeat: no-repeat;
  article {
    margin: 50px 80px 0 45%;

@@ -228,26 +228,26 @@ section > article {
 
 @font-face {
   font-family: 'Gotham-Light';
-  src: url("/fonts/Gotham-Light.otf") format("opentype");
+  src: url("/hbp-touchscreen-presentation/fonts/Gotham-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gotham-Book';
-  src: url("/fonts/Gotham-Book.otf") format("opentype");
+  src: url("/hbp-touchscreen-presentation/fonts/Gotham-Book.otf") format("opentype");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gotham-Medium';
-  src: url("/fonts/Gotham-Medium.otf") format("opentype");
+  src: url("/hbp-touchscreen-presentation/fonts/Gotham-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gotham-Black';
   font-weight: bold;
-  src: url("/fonts/Gotham-Black.otf") format("opentype");
+  src: url("/hbp-touchscreen-presentation/fonts/Gotham-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal; }
 
@@ -295,8 +295,8 @@ h3 {
 /* ICON FONTS */
 @font-face {
   font-family: '77-Essential-Icons';
-  src: url("/fonts/77-Essential-Icons.eot?-3rv21r");
-  src: url("/fonts/77-Essential-Icons.eot?#iefix-3rv21r") format("embedded-opentype"), url("/fonts/77-Essential-Icons.woff?-3rv21r") format("woff"), url("/fonts/77-Essential-Icons.ttf?-3rv21r") format("truetype"), url("/fonts/77-Essential-Icons.svg?-3rv21r#77-Essential-Icons") format("svg");
+  src: url("/hbp-touchscreen-presentation/fonts/77-Essential-Icons.eot?-3rv21r");
+  src: url("/hbp-touchscreen-presentation/fonts/77-Essential-Icons.eot?#iefix-3rv21r") format("embedded-opentype"), url("/hbp-touchscreen-presentation/fonts/77-Essential-Icons.woff?-3rv21r") format("woff"), url("/hbp-touchscreen-presentation/fonts/77-Essential-Icons.ttf?-3rv21r") format("truetype"), url("/hbp-touchscreen-presentation/fonts/77-Essential-Icons.svg?-3rv21r#77-Essential-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -614,7 +614,7 @@ h3 {
   height: 100%;
   opacity: 0;
   background-repeat: no-repeat;
-  background-image: url("/images/yuri-neuron.png"); }
+  background-image: url("/hbp-touchscreen-presentation/images/yuri-neuron.png"); }
 
 #hbp:target:before {
   opacity: 1;
@@ -630,7 +630,7 @@ h3 {
   height: 100%;
   opacity: 0;
   background-repeat: no-repeat;
-  background-image: url("/images/bruno-neuron.png"); }
+  background-image: url("/hbp-touchscreen-presentation/images/bruno-neuron.png"); }
 
 #global-collab:target:before {
   opacity: 1;
@@ -662,7 +662,7 @@ h3 {
   height: 100%;
   opacity: 0;
   background-repeat: no-repeat;
-  background-image: url("/images/ict-neuron.png"); }
+  background-image: url("/hbp-touchscreen-presentation/images/ict-neuron.png"); }
 
 #ict-project:target:before {
   opacity: 1;
@@ -685,7 +685,7 @@ h3 {
     height: 100%;
     opacity: 0;
     background-repeat: no-repeat;
-    background-image: url("/images/kid-neuron.png"); }
+    background-image: url("/hbp-touchscreen-presentation/images/kid-neuron.png"); }
   #commitment:target:before {
     opacity: 1;
     transition: all 800ms; }
